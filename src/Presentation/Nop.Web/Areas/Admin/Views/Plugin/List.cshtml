@@ -47,6 +47,13 @@
                         return true;
                     });
 
+                    //delete a plugin
+                    $("#plugins-grid").on("click", ".delete-plugin-link", function (e) {
+                        $("html, body").animate({ scrollTop: 0 }, 400);
+                        showThrobber('@Html.Raw(JavaScriptEncoder.Default.Encode(T("Admin.Configuration.Plugins.Fields.Delete.Progress").Text))');
+                        return true;
+                    });
+
                     //upload a plugin
                     $("#upload-plugin").on("click", function (e) {
                         $("html, body").animate({ scrollTop: 0 }, 400);
@@ -181,7 +188,7 @@
                                         }, {
                                             field: "Installed",
                                             title: "@T("Admin.Configuration.Plugins.Fields.Installation")",
-                                            template: '# if(Installed) {# <button type="submit" name="uninstall-plugin-link-#=SystemName#" class="btn bg-red uninstall-plugin-link">@T("Admin.Configuration.Plugins.Fields.Uninstall")</button> #} else {#  <button type="submit" name="install-plugin-link-#=SystemName#" class="btn bg-green install-plugin-link">@T("Admin.Configuration.Plugins.Fields.Install")</button> #} #',
+                                            template: '# if(Installed) {# <button type="submit" name="uninstall-plugin-link-#=SystemName#" class="btn bg-red uninstall-plugin-link">@T("Admin.Configuration.Plugins.Fields.Uninstall")</button> #} else {#  <button type="submit" name="install-plugin-link-#=SystemName#" class="btn bg-green install-plugin-link">@T("Admin.Configuration.Plugins.Fields.Install")</button> <button type="submit" name="delete-plugin-link-#=SystemName#" class="btn bg-red delete-plugin-link">@T("Admin.Configuration.Plugins.Fields.Delete")</button> #} #',
                                             headerAttributes: { style: "text-align:center" },
                                             attributes: { style: "text-align:center" },
                                             width: 150
