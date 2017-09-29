@@ -621,7 +621,20 @@ namespace Nop.Plugin.Payments.Square
             this.AddOrUpdatePluginLocaleResource("Plugins.Payments.Square.Fields.StoredCard.NotExist", "-------");
             this.AddOrUpdatePluginLocaleResource("Plugins.Payments.Square.Fields.TransactionMode", "Transaction mode");
             this.AddOrUpdatePluginLocaleResource("Plugins.Payments.Square.Fields.TransactionMode.Hint", "Choose the transaction mode.");
-            this.AddOrUpdatePluginLocaleResource("Plugins.Payments.Square.Instructions", "Will be later");
+            this.AddOrUpdatePluginLocaleResource("Plugins.Payments.Square.Instructions", @"
+                <p>
+                    For plugin configuration follow these steps:<br />
+                    <br />
+                    1. Create a <a href=""https://connect.squareup.com/apps"" target=""_blank"">Square application</a><br />
+                    2. Copy your Application ID from the 'Credentials' tab and your Application secret from the 'OAuth' tab<br />
+                    3. Save<br /> 
+                    4. Copy this '<em>{0}</em>' URL into the 'Redirect URL' field on the 'OAuth' tab<br />
+                    5. Click the 'Obtain access token' button to get the access token (recommended), or copy your Personal Access Token from the 'Credentials' tab<br />
+                    6. Save<br />
+                    7. Choose the business location. Location is a required parameter for payment requests<br />
+                    8. Fill in the remaining fields and save to complete the configuration<br />
+                    <br />
+                </p>");
             this.AddOrUpdatePluginLocaleResource("Plugins.Payments.Square.ObtainAccessToken", "Obtain access token");
             this.AddOrUpdatePluginLocaleResource("Plugins.Payments.Square.ObtainAccessToken.Error", "An error occurred while obtaining an access token");
             this.AddOrUpdatePluginLocaleResource("Plugins.Payments.Square.ObtainAccessToken.Success", "The access token was successfully obtained");

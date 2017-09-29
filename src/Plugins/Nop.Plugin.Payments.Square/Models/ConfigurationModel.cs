@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Nop.Web.Framework.Mvc.ModelBinding;
 using Nop.Web.Framework.Mvc.Models;
@@ -24,6 +25,8 @@ namespace Nop.Plugin.Payments.Square.Models
         public string ApplicationId { get; set; }
 
         [NopResourceDisplayName("Plugins.Payments.Square.Fields.ApplicationSecret")]
+        [DataType(DataType.Password)]
+        [NoTrim]
         public string ApplicationSecret { get; set; }
 
         [NopResourceDisplayName("Plugins.Payments.Square.Fields.AccessToken")]
