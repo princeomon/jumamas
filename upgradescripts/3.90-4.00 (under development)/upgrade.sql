@@ -284,6 +284,18 @@ set @resources='
   <LocaleResource Name="Admin.Configuration.Settings.Catalog.ExportImportCategoriesUsingCategoryName.Hint">
     <Value>Check if categories should be exported/imported using name of category.</Value>
   </LocaleResource>  
+  <LocaleResource Name="Nop.Services.ExportImport.NotExistingCategoriesError">
+    <Value>The following category names don''t exist - {0}</Value>
+  </LocaleResource>  
+  <LocaleResource Name="Nop.Services.ExportImport.NotExistingManufacturersError">
+    <Value>The following manufacturer names don''t exist - {0}</Value>
+  </LocaleResource>  
+  <LocaleResource Name="Nop.Services.ExportImport.NotExistingProductAttributesError">
+    <Value>The following product attribute IDs don''t exist - {0}</Value>
+  </LocaleResource>  
+  <LocaleResource Name="Nop.Services.ExportImport.NotImportingCategoriesError">
+    <Value>The following categories aren''t exported - {0}</Value>
+  </LocaleResource>      
 </Language>
 '
 
